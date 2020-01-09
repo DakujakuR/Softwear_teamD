@@ -47,6 +47,7 @@ class CalendarViewController: UIViewController, ViewLogic {
         dependencyInjection()
     }
     
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,9 @@ class CalendarViewController: UIViewController, ViewLogic {
         configure()
         settingLabel()
         getToday()
+    
     }
+    
     
     //MARK: Setting
     private func dependencyInjection() {
@@ -146,11 +149,13 @@ extension CalendarViewController: UICollectionViewDataSource {
             label.text = dayOfWeekLabel[row]
             cell.selectedBackgroundView = nil
         default:
+//日付をタップした時の動作？
             label.text = daysArray[row]
             let selectedView = UIView()
             selectedView.backgroundColor = .mercury()
             cell.selectedBackgroundView = selectedView
             markToday(label)
+            
         }
     }
     
