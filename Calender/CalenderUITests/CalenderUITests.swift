@@ -2,8 +2,8 @@
 //  CalenderUITests.swift
 //  CalenderUITests
 //
-//  Created by 373watohk on 2019/11/14.
-//  Copyright © 2019 373watohk. All rights reserved.
+//  Created by 中西康之 on 2019/05/15.
+//  Copyright © 2019 中西康之. All rights reserved.
 //
 
 import XCTest

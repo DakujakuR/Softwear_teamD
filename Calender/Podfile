@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+# Uncomment this line if you're using Swift
+use_frameworks!
+
+target 'Calender' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Calender
+
+  target 'CalenderTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CalenderUITests' do
+    # Pods for testing
+  end
+
+ # Pods for TestApp
+  pod ‘CalculateCalendarLogic’
+  pod 'RealmSwift'
+end
