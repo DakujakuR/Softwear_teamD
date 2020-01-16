@@ -36,6 +36,13 @@ class CalendarViewController: UIViewController, ViewLogic {
     @IBAction func prevBtn(_ sender: UIBarButtonItem) { prevMonth() }
     @IBAction func nextBtn(_ sender: UIBarButtonItem) { nextMonth() }
     
+    @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
+    @IBAction func goNext(_ sender:UIButton) {
+        let next = storyboard!.instantiateViewController(withIdentifier: "SelectDayView")
+        self.present(next,animated: true, completion: nil)
+    }
+    
     //MARK: Initialize
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -56,6 +63,11 @@ class CalendarViewController: UIViewController, ViewLogic {
         settingLabel()
         getToday()
     
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     

@@ -90,12 +90,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812.5" y="99.609375"/>
+            <point key="canvasLocation" x="783" y="100"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="SPH-Vf-9jD">
             <objects>
-                <viewController id="LWz-AC-U2b" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuView" id="LWz-AC-U2b" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xm6-h6-6Ft">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,6 +119,9 @@
                                         <integer key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5fE-qj-sTX" kind="show" id="ylu-vb-LYf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,31 +130,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJG-3c-y0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489.84375" y="99.609375"/>
+            <point key="canvasLocation" x="1467" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pMs-3S-ra2">
+            <objects>
+                <viewController id="5fE-qj-sTX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9NL-nj-sq0">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="d9k-w5-t9i">
+                                <rect key="frame" x="0.0" y="70" width="768" height="904"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="569306267.06737804">
+                                    <!--2019-01-16 04:37:47 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xvc-ef-oRy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wru-6B-JCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245.3125" y="99.609375"/>
         </scene>
         <!--Select Day View Controller-->
         <scene sceneID="iHU-v9-HQh">
             <objects>
-                <viewController id="dQ0-p1-NQp" customClass="SelectDayViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectDayView" id="dQ0-p1-NQp" customClass="SelectDayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bq-2V-oFA">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xx日の予定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrA-hW-8zZ">
-                                <rect key="frame" x="247" y="70" width="274" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qyq-M4-rxZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyI-Bj-Pwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036.71875" y="789.84375"/>
+            <point key="canvasLocation" x="1134" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oUB-cy-gjV">

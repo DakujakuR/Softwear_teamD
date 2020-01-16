@@ -1,15 +1,15 @@
 //
 //  AppDelegate.swift
-//  Calender
+//  aiueo
 //
-//  Created by 中西康之 on 2019/05/15.
-//  Copyright © 2019 中西康之. All rights reserved.
+//  Created by 謝敷宗我 on 2020/01/16.
+//  Copyright © 2020 謝敷宗我. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-class zppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
