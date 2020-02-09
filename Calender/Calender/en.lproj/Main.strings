@@ -1,0 +1,9 @@
+
+/* Class = "UIBarButtonItem"; title = "次月 >"; ObjectID = "r1X-Ds-FA0"; */
+"r1X-Ds-FA0.title" = "次月 >";
+
+/* Class = "UIBarButtonItem"; title = "< 先月"; ObjectID = "uh3-Ri-TB2"; */
+"uh3-Ri-TB2.title" = "< 先月";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "w3W-MS-Hn0"; */
+"w3W-MS-Hn0.text" = "Label";

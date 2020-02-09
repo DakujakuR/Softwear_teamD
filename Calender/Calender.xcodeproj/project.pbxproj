@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		250D8BA9133A8DC3E5E51953 /* Pods_Calender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8DC4B9D10E72D41E1590E0 /* Pods_Calender.framework */; };
+		604CAB4823EFD72500B0EA5F /* DateInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604CAB4723EFD72500B0EA5F /* DateInputViewController.swift */; };
 		61BEF27523B705500089E960 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF27423B705500089E960 /* Event.swift */; };
 		61BEF27723B7063C0089E960 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BEF27623B7063C0089E960 /* EventViewController.swift */; };
 		706A44AF1B75E733CAF2FC34 /* Pods_CalenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD4A325CF993EE1D1B8D70F /* Pods_CalenderTests.framework */; };
@@ -49,6 +50,8 @@
 		1BD4A325CF993EE1D1B8D70F /* Pods_CalenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCD069356B4FA79596417A8 /* Pods_Calender_CalenderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calender_CalenderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD3BCE223A65867E32C4237 /* Pods-Calender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calender.debug.xcconfig"; path = "Target Support Files/Pods-Calender/Pods-Calender.debug.xcconfig"; sourceTree = "<group>"; };
+		603B78B523D0394C0076E6C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		604CAB4723EFD72500B0EA5F /* DateInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputViewController.swift; sourceTree = "<group>"; };
 		61BEF27423B705500089E960 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		61BEF27623B7063C0089E960 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		BCB41905228C3E180094F2CB /* Calender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calender.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +145,6 @@
 				BCB4190C228C3E180094F2CB /* Main.storyboard */,
 				BCB4193B228C3E540094F2CB /* Presentation */,
 				BCB41936228C3E540094F2CB /* Domain */,
-				BCB41939228C3E540094F2CB /* Extension */,
 				BCB4190F228C3E190094F2CB /* Assets.xcassets */,
 				BCB41911228C3E190094F2CB /* LaunchScreen.storyboard */,
 				BCB41914228C3E190094F2CB /* Info.plist */,
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				BCB41937228C3E540094F2CB /* CalendarUseCase.swift */,
+				BCB41939228C3E540094F2CB /* Extension */,
 				BCB41938228C3E540094F2CB /* DateItems.swift */,
 			);
 			path = Domain;
@@ -193,6 +196,7 @@
 				61BEF27423B705500089E960 /* Event.swift */,
 				BCB4193E228C3E540094F2CB /* CalendarController.swift */,
 				BCB4193C228C3E540094F2CB /* CalendarPresenter.swift */,
+				604CAB4723EFD72500B0EA5F /* DateInputViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -454,6 +458,7 @@
 				BCB41944228C3E550094F2CB /* CalendarController.swift in Sources */,
 				BCB4190B228C3E180094F2CB /* CalendarViewController.swift in Sources */,
 				BCB4193F228C3E550094F2CB /* CalendarUseCase.swift in Sources */,
+				604CAB4823EFD72500B0EA5F /* DateInputViewController.swift in Sources */,
 				61BEF27723B7063C0089E960 /* EventViewController.swift in Sources */,
 				BCB41940228C3E550094F2CB /* DateItems.swift in Sources */,
 				BCB41909228C3E180094F2CB /* AppDelegate.swift in Sources */,
@@ -497,6 +502,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BCB4190D228C3E180094F2CB /* Base */,
+				603B78B523D0394C0076E6C5 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

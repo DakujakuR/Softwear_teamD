@@ -836,13 +836,8 @@ case "$COMMAND" in
         exit 0
         ;;
 
-    test-swiftpm*)
-        SANITIZER=$(echo $COMMAND | cut -d - -f 3)
-        if [ -n "$SANITIZER" ]; then
-            SANITIZER="--sanitize $SANITIZER"
-            export ASAN_OPTIONS='check_initialization_order=true:detect_stack_use_after_return=true'
-        fi
-        xcrun swift test --configuration $(echo $CONFIGURATION | tr "[:upper:]" "[:lower:]") $SANITIZER
+    "test-swiftpm")
+        xcrun swift test --configuration $(echo $CONFIGURATION | tr "[:upper:]" "[:lower:]")
         exit 0
         ;;
 
@@ -889,7 +884,6 @@ case "$COMMAND" in
         fi
 
         sh build.sh verify-cocoapods-ios
-        sh build.sh verify-cocoapods-ios-dynamic
         sh build.sh verify-cocoapods-osx
         sh build.sh verify-cocoapods-watchos
 
@@ -905,14 +899,6 @@ case "$COMMAND" in
         sh build.sh test-watchos-swift-cocoapods
         ;;
 
-    verify-cocoapods-ios-dynamic)
-        PLATFORM=$(echo $COMMAND | cut -d - -f 3)
-        # https://github.com/CocoaPods/CocoaPods/issues/7708
-        export EXPANDED_CODE_SIGN_IDENTITY=''
-        cd examples/installation
-        sh build.sh test-ios-objc-cocoapods-dynamic
-        ;;
-
     verify-cocoapods-*)
         PLATFORM=$(echo $COMMAND | cut -d - -f 3)
         # https://github.com/CocoaPods/CocoaPods/issues/7708
@@ -920,6 +906,9 @@ case "$COMMAND" in
         cd examples/installation
         sh build.sh test-$PLATFORM-objc-cocoapods
         sh build.sh test-$PLATFORM-swift-cocoapods
+        if [[ $PLATFORM = "ios" ]]; then
+            sh build.sh test-ios-objc-cocoapods-dynamic
+        fi
         ;;
 
     "verify-osx-encryption")
@@ -944,7 +933,7 @@ case "$COMMAND" in
         ;;
 
     "verify-ios-static")
-        REALM_EXTRA_BUILD_ARGUMENTS="$REALM_EXTRA_BUILD_ARGUMENTS -workspace examples/ios/objc/RealmExamples.xcworkspace" sh build.sh test-ios-static
+        sh build.sh test-ios-static
         sh build.sh examples-ios
         ;;
 
@@ -953,7 +942,7 @@ case "$COMMAND" in
         ;;
 
     "verify-ios-swift")
-        REALM_EXTRA_BUILD_ARGUMENTS="$REALM_EXTRA_BUILD_ARGUMENTS -workspace examples/ios/swift/RealmExamples.xcworkspace" sh build.sh test-ios-swift
+        sh build.sh test-ios-swift
         sh build.sh examples-ios-swift
         ;;
 
@@ -1007,8 +996,8 @@ case "$COMMAND" in
         exit 0
         ;;
 
-    verify-swiftpm*)
-        sh build.sh test-$(echo $COMMAND | cut -d - -f 2-)
+    "verify-swiftpm")
+        sh build.sh test-swiftpm
         exit 0
         ;;
 
@@ -1511,13 +1500,8 @@ x.y.z Release notes (yyyy-MM-dd)
 ### Compatibility
 * File format: Generates Realms with format v9 (Reads and upgrades all previous formats)
 * Realm Object Server: 3.21.0 or later.
-* APIs are backwards compatible with all previous releases in the 4.x.y series.
-* Carthage release for Swift is built with Xcode 11.3.
-
-### Internal
-Upgraded realm-core from ? to ?
-Upgraded realm-sync from ? to ?
-
+* APIs are backwards compatible with all previous releases in the 3.x.y series.
+* Carthage release for Swift is built with Xcode 11.0.
 EOS)
         changelog=$(cat CHANGELOG.md)
         echo "$empty_section" > CHANGELOG.md

@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/e185724/software_team/Softwear_teamD/Calender/build/Debug-iphonesimulator/CalculateCalendarLogic/CalculateCalendarLogic.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/e185724/software_team/Softwear_teamD/Calender/build/Pods.build/Debug-iphonesimulator/CalculateCalendarLogic.build/unextended-module.modulemap",
+    }]
+  }]
+}

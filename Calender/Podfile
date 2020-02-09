@@ -22,4 +22,5 @@ target 'Calender' do
  # Pods for TestApp
   pod ‘CalculateCalendarLogic’
   pod 'RealmSwift'
+  # pod 'RealmSwift', '~> 3.18.0'
 end

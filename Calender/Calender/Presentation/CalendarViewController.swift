@@ -15,9 +15,31 @@ protocol ViewLogic {
     var numberOfWeeks: Int { get set }
     var daysArray: [String]! { get set }
 }
+/*
+class Person: Object {
+    dynamic var name = "田中"
+    dynamic var age  = 0
+    dynamic var sec  = "MALE"
+}*/
+
+
 
 //MARK:- UIViewController
 class CalendarViewController: UIViewController, ViewLogic {
+    /*
+    let realm = try! Realm()
+    
+    let tanaka = Person()
+    
+    //つくったやーつ
+    @IBAction func YearDateDay(_ sender: Any) {
+        tanaka.name = "田中"
+        tanaka.age  = 23
+        tanaka.sec  = "MALE"
+        print(tanaka.name)
+        print(tanaka.age)
+        print(tanaka.sec)
+    }*/
     
     //MARK: Properties
     var numberOfWeeks: Int = 0
@@ -37,6 +59,11 @@ class CalendarViewController: UIViewController, ViewLogic {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func prevBtn(_ sender: UIBarButtonItem) { prevMonth() }
     @IBAction func nextBtn(_ sender: UIBarButtonItem) { nextMonth() }
+    @IBAction func datePicker1(_ sender: Any) {
+        print("picker1")
+    }
+    @IBAction func datePicker2(_ sender: Any) {
+    }
     
     //MARK: Initialize
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -117,13 +144,14 @@ extension CalendarViewController {
 //MARK:- UICollectionViewDataSource
 extension CalendarViewController: UICollectionViewDataSource {
     
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return section == 0 ? 7 : (numberOfWeeks * daysPerWeek)
-         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -133,7 +161,6 @@ extension CalendarViewController: UICollectionViewDataSource {
         dayOfWeekColor(label, indexPath.row, daysPerWeek, indexPath.section)
         showDate(indexPath.section, indexPath.row, cell, label)
         return cell
-        
     }
     
     private func dayOfWeekColor(_ label: UILabel, _ row: Int, _ daysPerWeek: Int, _ section: Int) {
@@ -145,6 +172,9 @@ extension CalendarViewController: UICollectionViewDataSource {
         switch section {
         case 0:
             print("")
+            
+            
+            
         default:
             let day: String? = daysArray[row]
             if(daysArray[row] != ""){

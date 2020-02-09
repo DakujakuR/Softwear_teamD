@@ -1,23 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qsq-e3-CBl">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qsq-e3-CBl">
+    <device id="ipad12_9rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Date Input View Controller-->
+        <scene sceneID="zwZ-CC-DU5">
+            <objects>
+                <viewController id="HSu-xl-K41" customClass="DateInputViewController" customModule="Calender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IBn-wl-ZTA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eAu-TO-nk9">
+                                <rect key="frame" x="20" y="718" width="984" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="602920170.74252295">
+                                    <!--2020-02-09 05:49:30 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="Ql4-Sw-S08" eventType="valueChanged" id="Ijb-94-rl1"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfH-gN-E2G">
+                                <rect key="frame" x="20" y="369" width="984" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-Dc-d14">
+                                <rect key="frame" x="20" y="1148" width="984" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Get Date"/>
+                                <connections>
+                                    <action selector="GetDate:" destination="HSu-xl-K41" eventType="touchUpInside" id="Lu6-M2-1eb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QvT-ze-XW8"/>
+                    </view>
+                    <connections>
+                        <outlet property="Label" destination="YfH-gN-E2G" id="F2b-MD-ZUy"/>
+                        <outlet property="Picker" destination="eAu-TO-nk9" id="ECM-O0-eQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsv-Ek-PZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ql4-Sw-S08" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2175.5859375" y="99.707174231332345"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rDn-7c-0Ly">
+            <objects>
+                <viewController id="VDY-TJ-64p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0k-gT-36b">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jbX-t1-BBa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da4-NH-qN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="786"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="Calender" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ty9-uf-2Fg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="74" width="1024" height="1222"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="b7u-pc-epE">
                                     <size key="itemSize" width="50" height="50"/>
@@ -53,6 +118,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ty9-uf-2Fg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5wp-bx-xTq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ty9-uf-2Fg" secondAttribute="bottom" id="5xO-VZ-Bax"/>
@@ -61,18 +127,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="VDB-cl-d19">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; 先月" id="uh3-Ri-TB2">
-                            <connections>
-                                <action selector="prevBtn:" destination="BYZ-38-t0r" id="JAP-yu-tHs"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="yr6-vl-Y2J">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2l2-Js-Lhf">
+                                <rect key="frame" x="20" y="10" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" Menu"/>
+                                <connections>
+                                    <segue destination="nLA-cU-cZQ" kind="show" id="o9O-xb-Z4f"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="次月 &gt;" id="r1X-Ds-FA0">
-                            <connections>
-                                <action selector="nextBtn:" destination="BYZ-38-t0r" id="5iQ-8c-zkf"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="次月 &gt;" id="r1X-Ds-FA0">
+                                <connections>
+                                    <action selector="nextBtn:" destination="BYZ-38-t0r" id="5iQ-8c-zkf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="&lt; 先月" id="uh3-Ri-TB2">
+                                <connections>
+                                    <action selector="prevBtn:" destination="BYZ-38-t0r" id="JAP-yu-tHs"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Ty9-uf-2Fg" id="Q9B-fB-8Ut"/>
                     </connections>
@@ -81,13 +161,38 @@
             </objects>
             <point key="canvasLocation" x="813" y="100"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vdy-mJ-nDl">
+            <objects>
+                <viewController id="nLA-cU-cZQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0W2-CN-PuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-te-6o3">
+                                <rect key="frame" x="682" y="668" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HSu-xl-K41" kind="show" id="q7y-an-XIZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3Iu-n3-938"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jY1-M9-2Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488" y="100"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="oUB-cy-gjV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qsq-e3-CBl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qwk-FA-TDd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
