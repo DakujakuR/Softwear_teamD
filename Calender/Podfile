@@ -9,6 +9,7 @@ target 'Calender' do
   use_frameworks!
 
   # Pods for Calender
+  pod 'RealmSwift
 
   target 'CalenderTests' do
     inherit! :search_paths

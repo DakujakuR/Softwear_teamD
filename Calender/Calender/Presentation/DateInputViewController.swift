@@ -15,9 +15,10 @@ class Persons: Object {
     dynamic var date : Double = 0
 }
 class User: Object {
-    dynamic var id = 0
-    dynamic var name = ""
-    dynamic var createdAt: Double = 0
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var createdAt: Double = 0
+    @objc dynamic var aiueo = 0
 }
 
 class DateInputViewController: UIViewController {
@@ -28,8 +29,11 @@ class DateInputViewController: UIViewController {
     @IBOutlet weak var Picker: UIDatePicker!
     @IBOutlet weak var Label: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "予定の追加"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -40,22 +44,25 @@ class DateInputViewController: UIViewController {
     
     @IBAction func GetDate(_ sender: Any) {
         let realm = try! Realm()
+        /*
+        //default.realmの場所を確認
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        */
         print(realm)
         
         let tanaka = User()
         tanaka.id = 1
         tanaka.name = "田中"
         tanaka.createdAt = NSDate().timeIntervalSince1970
+        tanaka.aiueo = 1
         try! realm.write {
             realm.add(tanaka)
         }
         
-        /*
-        for user in realm.objects(Persons.self){
+        for user in realm.objects(User.self){
             print(user.name)
-        }*/
+        }
         Label.text = "\(Picker.date)"
-        
     }
     
     
