@@ -62,11 +62,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="VDB-cl-d19">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; 先月" id="uh3-Ri-TB2">
-                            <connections>
-                                <action selector="prevBtn:" destination="BYZ-38-t0r" id="JAP-yu-tHs"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="&lt; 先月" id="uh3-Ri-TB2">
+                                <connections>
+                                    <action selector="prevBtn:" destination="BYZ-38-t0r" id="JAP-yu-tHs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="g0S-K0-c16">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XRa-6J-gVc">
+                                    <rect key="frame" x="81" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="メニュー"/>
+                                </button>
+                                <connections>
+                                    <segue destination="YHq-UJ-D3O" kind="show" identifier="goMenu" id="1Pe-wI-fOV"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="次月 &gt;" id="r1X-Ds-FA0">
                             <connections>
                                 <action selector="nextBtn:" destination="BYZ-38-t0r" id="5iQ-8c-zkf"/>
@@ -80,6 +92,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="813" y="100"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="1jR-QF-LSi">
+            <objects>
+                <viewController id="YHq-UJ-D3O" customClass="SecondViewController" customModule="Calender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8j-CZ-upc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XLp-iB-71y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="baa-yl-aaD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQZ-d6-TlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="97"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oUB-cy-gjV">
