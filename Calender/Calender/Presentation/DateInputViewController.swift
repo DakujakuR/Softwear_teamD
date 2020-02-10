@@ -47,7 +47,9 @@ class DateInputViewController: UIViewController {
     
     @IBOutlet weak var Picker: UIDatePicker!
     @IBOutlet weak var Picker2: UIDatePicker!
-    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var ContentTitle: UITextField!
+    @IBOutlet weak var Content: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,10 +77,7 @@ class DateInputViewController: UIViewController {
         //save_date = f.date(from: save_date_str)!
         //print(save_date)
 
-        
-        
-        
-        Label.text = DateUtils.stringFromDate(date: date, format: "yyyy年MM月dd日 HH時mm分ss秒 Z")
+
         
         //datepicker2
         let dateStr2 = "\(Picker2.date)"
@@ -90,11 +89,10 @@ class DateInputViewController: UIViewController {
         //日付情報をString型に変更
         /*var save_date2 = Calendar.current.date(byAdding: .hour, value: 9, to: date2)!
         save_date2 = Calendar.current.date(byAdding: .day, value: -1, to: save_date2)!
-        print(save_date2)
-        Label.text = DateUtils.stringFromDate(date: date2, format: "yyyy年MM月dd日 HH時mm分ss秒 Z")*/
+        print(save_date2)*/
         
-        
-        //self.navigationController?.popToRootViewController(animated: true)
+        print(ContentTitle.text!)
+        print(Content.text!) //self.navigationController?.popToRootViewController(animated: true)
         
         
         //realm
