@@ -31,7 +31,7 @@ class DateUtils {
         formatter.dateFormat = format
         return formatter.date(from: string)!
     }
-
+    
     class func stringFromDate(date: Date, format: String) -> String {
         let formatter: DateFormatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .gregorian)
@@ -68,7 +68,7 @@ class DateInputViewController: UIViewController {
         f.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         let calendar = Calendar.current
         
-
+        
         //datepicker1
         let dateStr = "\(Picker.date)"
         let date = DateUtils.dateFromString(string: dateStr, format: "yyyy/MM/dd HH:mm:ss Z")
@@ -78,8 +78,8 @@ class DateInputViewController: UIViewController {
         //let save_date_str = f.string(from: Calendar.current.date(byAdding: .day, value: 0, to: save_date)!)
         //save_date = f.date(from: save_date_str)!
         //print(save_date)
-
-
+        
+        
         
         //datepicker2
         let dateStr2 = "\(Picker2.date)"
@@ -90,26 +90,27 @@ class DateInputViewController: UIViewController {
         
         //日付情報をString型に変更
         /*var save_date2 = Calendar.current.date(byAdding: .hour, value: 9, to: date2)!
-        save_date2 = Calendar.current.date(byAdding: .day, value: -1, to: save_date2)!
-        print(save_date2)*/
+         save_date2 = Calendar.current.date(byAdding: .day, value: -1, to: save_date2)!
+         print(save_date2)*/
         
-        print(ContentTitle.text!)
-        print(Content.text!) //self.navigationController?.popToRootViewController(animated: true)
+        print("タイトル：" + ContentTitle.text!)
+        print("概要：" + Content.text!) //self.navigationController?.popToRootViewController(animated: true)
         
         
         //realm
-        /*let realm = try! Realm()
+        let realm = try! Realm()
         let person = Tset()
         person.id = 2
-
-
+        
+        
         try! realm.write {
             realm.add(person)
         }
         
         for user in realm.objects(Persons.self){
             print(user.name)
-        }*/
+        }
         
+        self.navigationController?.popViewController(animated: true)
     }
 }

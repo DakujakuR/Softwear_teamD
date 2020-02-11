@@ -9,5 +9,5 @@
 import UIKit
 
 class EventViewController: NSObject {
-
+    
 }

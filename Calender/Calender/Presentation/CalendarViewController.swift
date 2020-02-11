@@ -16,30 +16,30 @@ protocol ViewLogic {
     var daysArray: [String]! { get set }
 }
 /*
-class Person: Object {
-    dynamic var name = "田中"
-    dynamic var age  = 0
-    dynamic var sec  = "MALE"
-}*/
+ class Person: Object {
+ dynamic var name = "田中"
+ dynamic var age  = 0
+ dynamic var sec  = "MALE"
+ }*/
 
 
 
 //MARK:- UIViewController
 class CalendarViewController: UIViewController, ViewLogic {
     /*
-    let realm = try! Realm()
-    
-    let tanaka = Person()
-    
-    //つくったやーつ
-    @IBAction func YearDateDay(_ sender: Any) {
-        tanaka.name = "田中"
-        tanaka.age  = 23
-        tanaka.sec  = "MALE"
-        print(tanaka.name)
-        print(tanaka.age)
-        print(tanaka.sec)
-    }*/
+     let realm = try! Realm()
+     
+     let tanaka = Person()
+     
+     //つくったやーつ
+     @IBAction func YearDateDay(_ sender: Any) {
+     tanaka.name = "田中"
+     tanaka.age  = 23
+     tanaka.sec  = "MALE"
+     print(tanaka.name)
+     print(tanaka.age)
+     print(tanaka.sec)
+     }*/
     
     //MARK: Properties
     var numberOfWeeks: Int = 0
@@ -187,7 +187,7 @@ extension CalendarViewController: UICollectionViewDataSource {
         }
         //let isHoliday: Bool = holidayObj.judgeJapaneseHoliday(year: thisYear, month: thisMonth, day: Int(day!)!)
         //if isHoliday == true {
-            //label.textColor = .red
+        //label.textColor = .red
         //}
     }
     

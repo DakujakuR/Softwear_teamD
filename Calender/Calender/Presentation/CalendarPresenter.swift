@@ -14,7 +14,7 @@ protocol ResponseForCalendar {
 }
 
 class CalendarPresenter: ResponseForCalendar {
-
+    
     var viewLogic: ViewLogic?
     
     func responseDateManager(response: [String]) {

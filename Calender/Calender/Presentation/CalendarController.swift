@@ -17,7 +17,7 @@ protocol RequestForCalendar: class {
 }
 
 class CalendarController: RequestForCalendar {
-
+    
     var calendarLogic: CalendarLogic?
     
     func requestNumberOfWeeks(request: DateItems.ThisMonth.Request) {
