@@ -59,6 +59,11 @@ class CalendarViewController: UIViewController, ViewLogic {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func prevBtn(_ sender: UIBarButtonItem) { prevMonth() }
     @IBAction func nextBtn(_ sender: UIBarButtonItem) { nextMonth() }
+    @IBAction func datePicker1(_ sender: Any) {
+        print("picker1")
+    }
+    @IBAction func datePicker2(_ sender: Any) {
+    }
     
     //MARK: Initialize
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

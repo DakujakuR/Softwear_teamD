@@ -16,27 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
         let config = Realm.Configuration(
-            
-            schemaVersion: 1,
-            
-            
-            migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
-                    
-                }
-        })
-        
-        Realm.Configuration.defaultConfiguration = config
-        
-        _ = try! Realm()
-        // Override point for customization after application launch.
-        
-        
-        
-        return true
+             
+             schemaVersion: 1,
+             
+             
+             migrationBlock: { migration, oldSchemaVersion in
+                 if (oldSchemaVersion < 1) {
+                     
+                 }
+         })
+         
+         Realm.Configuration.defaultConfiguration = config
+         
+         //default.realmの場所を確認
+         //print(Realm.Configuration.defaultConfiguration.fileURL!)
+
+         _ = try! Realm()
+         // Override point for customization after application launch.
+                 return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
