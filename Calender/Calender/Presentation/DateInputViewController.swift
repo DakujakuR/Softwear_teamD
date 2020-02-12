@@ -17,7 +17,7 @@ class Persons: Object {
 
 class Tset: Object {
     @objc dynamic var id = 0
-    @objc dynamic var title = ""
+    @objc dynamic var contentTitle = ""
     @objc dynamic var content = ""
     @objc dynamic var start_time: Double = 0
     @objc dynamic var end_time: Double = 0
@@ -43,8 +43,6 @@ class DateUtils {
 class DateInputViewController: UIViewController {
     
     //紐づけ
-    
-    
     @IBOutlet weak var Picker: UIDatePicker!
     @IBOutlet weak var Picker2: UIDatePicker!
     @IBOutlet weak var ContentTitle: UITextField!
@@ -63,7 +61,12 @@ class DateInputViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //追加ボタンを押した時の処理
     @IBAction func GetDate(_ sender: Any) {
+        let s = Tset()
+        s.contentTitle = ContentTitle.text!
+        s.content = Content.text!
+        
         let f = DateFormatter()
         f.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         let calendar = Calendar.current
@@ -98,18 +101,38 @@ class DateInputViewController: UIViewController {
         
         
         //realm
-        let realm = try! Realm()
-        let person = Tset()
-        person.id = 2
-        
-        
-        try! realm.write {
-            realm.add(person)
+        /*
+         let realm = try! Realm()
+         let person = Tset()
+         person.id = 2
+         
+         
+         try! realm.write {
+         realm.add(person)
+         }
+         
+         for user in realm.objects(Persons.self){
+         print(user.name)
+         }
+         */
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(s)
+                print("ToDo Saved")
+            })
+            
+            var i=0
+            for user in realm.objects(Tset.self){
+                print("保存されたタイトル\(i)つめ：" + user.contentTitle )
+                i = i + 1
+            }
+            
+        }catch{
+            print("Save is Faild")
         }
+        //let realm = try! Realm()
         
-        for user in realm.objects(Persons.self){
-            print(user.name)
-        }
         
         self.navigationController?.popViewController(animated: true)
     }

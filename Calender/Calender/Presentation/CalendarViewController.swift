@@ -26,20 +26,7 @@ protocol ViewLogic {
 
 //MARK:- UIViewController
 class CalendarViewController: UIViewController, ViewLogic {
-    /*
-     let realm = try! Realm()
-     
-     let tanaka = Person()
-     
-     //つくったやーつ
-     @IBAction func YearDateDay(_ sender: Any) {
-     tanaka.name = "田中"
-     tanaka.age  = 23
-     tanaka.sec  = "MALE"
-     print(tanaka.name)
-     print(tanaka.age)
-     print(tanaka.sec)
-     }*/
+    
     
     //MARK: Properties
     var numberOfWeeks: Int = 0
